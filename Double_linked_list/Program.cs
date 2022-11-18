@@ -22,6 +22,17 @@ namespace Double_linked_list
         public Node prev;
     }
 
+
+    class DoubleLinkedList
+    {
+        Node start;
+
+        //constructor
+
+
+    }
+
+
     class Program
     {
         static void Main(string[] args)
