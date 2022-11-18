@@ -54,10 +54,39 @@ namespace Double_linked_list
                 newNode.next = null;
                 start = newNode;
                 return;
-
-
-
             }
+            /* if the node is to be inserted between two node*/
+            Node previous, current;
+            for(current = previous = start;
+                current != null && nim>= current.noMhs;
+                previous = current, current = current.next)
+            {
+                if (nim == current.noMhs)
+                {
+                    Console.WriteLine("\n Duplicate roll number not allowes");
+                    return;
+                }
+            }
+            /* On the execution of the above for loop,prev and 
+             * cureent will point to those nodes
+             * between which the new node is to be inserted
+             * */
+            newNode.next = current;
+            newNode.prev = previous;
+
+            //if the node is to be inserted at the end of the list
+
+            if (current == null)
+            {
+                newNode.next = null;
+                previous.next = newNode;
+                return ;
+            }
+            current.prev = newNode;
+            previous.next = newNode;
+
+
+
         }
 
     }
