@@ -134,6 +134,32 @@ namespace Double_linked_list
             }
         }
 
+        public void descending()
+        {
+            if (ListEmpty())
+                Console.WriteLine("\n List is empty");
+            else
+            {
+                Console.WriteLine("\n Record in descending order of " + "Roll number are: \n");
+                Node currentNode;
+                // Moves currentNode to last 
+                currentNode = start;
+                while(currentNode.next != null)
+                {
+                    currentNode = currentNode.next;
+                
+                }
+                //reads data from last to first node
+                while(currentNode != null)
+                {
+                    Console.Write(currentNode.noMhs + "  " + currentNode.name + "\n");
+                    currentNode = currentNode.prev;
+                }
+
+
+            }
+        }
+
         public bool ListEmpty()
         {
             if (start == null)
