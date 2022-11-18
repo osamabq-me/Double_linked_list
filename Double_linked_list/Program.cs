@@ -116,7 +116,32 @@ namespace Double_linked_list
                     start.prev = null;
                 return true;
             }
+            //if the node to be deleted is between two nodes in list this lines will be executed
+            previous.next = current.next;
+            current.next.prev = previous;
+            return true;
         }
+        public void ascending()
+        {
+            if (ListEmpty())
+                Console.WriteLine("\n List is empty");
+            else
+            {
+                Console.WriteLine("\n Record in the ascending order of " + "Roll number are: \n");
+                Node currentNode;
+                for (currentNode = start; currentNode != null; currentNode = currentNode.next)
+                    Console.Write(currentNode.noMhs + "  " + currentNode.name + "\n");
+            }
+        }
+
+        public bool ListEmpty()
+        {
+            if (start == null)
+                return true;
+            else
+                return false;
+        }
+
 
     }
 
