@@ -28,7 +28,15 @@ namespace Double_linked_list
         Node start;
 
         //constructor
-
+        public void addNode()
+        {
+            int nim;
+            string nm;
+            Console.WriteLine("\n Enter the roll number of the students :");
+            nim = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\n Enter students name");
+            nm = Console.ReadLine(); 
+        }
 
     }
 
