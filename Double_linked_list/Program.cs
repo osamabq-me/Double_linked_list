@@ -39,6 +39,25 @@ namespace Double_linked_list
             Node newNode = new Node();
             newNode.noMhs = nim;
             newNode.name = nm;
+
+            // check if the list is empty 
+            if(start == null || nim <= start.noMhs)
+            {
+                if ((start != null) && (nim == start.noMhs))
+                {
+                    Console.WriteLine("\n Duplicaite number not allwoed");
+                    return;
+                }
+                newNode.next = start;
+                if (start != null)
+                    start.prev = newNode;
+                newNode.next = null;
+                start = newNode;
+                return;
+
+
+
+            }
         }
 
     }
