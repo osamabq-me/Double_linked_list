@@ -108,6 +108,14 @@ namespace Double_linked_list
                 previous.next = null;
                 return true;
             }
+            //Node between  two nodes in the list
+            if (current == start)
+            {
+                start = start.next;
+                if (start != null)
+                    start.prev = null;
+                return true;
+            }
         }
 
     }
